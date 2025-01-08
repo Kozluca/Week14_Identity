@@ -25,7 +25,7 @@ namespace Week14_Identity.Controllers
         }
 
         [HttpPost("Register")]
-        public async Task<IActionResult> Register(RegisterViewModel model)
+        public async Task<IActionResult> Register(User model)
         {
             if (ModelState.IsValid)
             {
@@ -135,7 +135,6 @@ namespace Week14_Identity.Controllers
                            {
                                Email = u.Email,
                                Name = u.Email,
-                            
                            })
                             .ToListAsync();
             return Ok(users);
